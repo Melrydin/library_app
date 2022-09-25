@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "192.168.178.24",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "Library App",
+            "database": "libaray",
+            "username": "libaray_api",
+            "password": "hallowelt"
+        }
+    ]
+}
