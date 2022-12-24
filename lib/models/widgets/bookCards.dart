@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:library_app/UI/NewBookPage.dart';
 import 'package:library_app/models/global.dart';
 import 'package:library_app/models/widgets/book.dart';
+import 'package:library_app/models/widgets/groundDesign.dart';
 
 import 'converter.dart';
 
@@ -34,20 +35,7 @@ class _BookCardState extends State<BookCard> {
           ),
         );
       },
-      child: Container(
-        margin: const EdgeInsets.only(top: 10, left: 8, right: 8),
-        padding: const EdgeInsets.all(10),
-        height: 130,
-        decoration: BoxDecoration(
-          color: widget.book.gift ? greyColor : redColor,
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.5),
-              blurRadius: 10.0,
-            ),
-          ],
-        ),
+      child: DesignContainer(
         child: Column(
           children: [
             Row(
