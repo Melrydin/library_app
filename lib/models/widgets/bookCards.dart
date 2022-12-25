@@ -23,6 +23,7 @@ class BookCard extends StatefulWidget {
 class _BookCardState extends State<BookCard> {
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: () async {
         Navigator.of(context).push(
@@ -42,7 +43,7 @@ class _BookCardState extends State<BookCard> {
               children: [
                 SizedBox(
                   height: 40,
-                  width: 370,
+                  width: width - 30,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Text(
@@ -86,9 +87,10 @@ class _BookCardState extends State<BookCard> {
                         Text(
                             "Band: ${widget.book.volume == 0 ? "-" : widget.book.volume}",
                             style: darkBookAuthor),
-                        if (widget.book.wishlist == true) ...[
+                        if ((widget.book.wishlist == true) &&
+                            (widget.book.borrow == false)) ...[
                           Text(
-                            "Relase: ${dateToString(widget.book.releaseDate)}",
+                            "Release: ${dateToString(widget.book.releaseDate)}",
                             style: darkBookAuthor,
                           ),
                           Text(
@@ -96,7 +98,8 @@ class _BookCardState extends State<BookCard> {
                             style: darkBookAuthor,
                           ),
                         ],
-                        if (widget.book.wishlist == false) ...[
+                        if ((widget.book.wishlist == false) |
+                            (widget.book.borrow == true)) ...[
                           Text(
                             "Start: ${dateToString(widget.book.startDate)}",
                             style: darkBookAuthor,

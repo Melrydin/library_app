@@ -39,7 +39,6 @@ class _NewBookPageState extends State<NewBookPage> {
   bool? selectedBorrow = false;
   late Book? book;
   final double height = 60;
-  final double width = 190;
   bool isLoading = false;
   final TextEditingController _titleController =
       TextEditingController(text: "");
@@ -172,6 +171,7 @@ class _NewBookPageState extends State<NewBookPage> {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text(getTitle(widget.inEditMode)),
@@ -244,7 +244,7 @@ class _NewBookPageState extends State<NewBookPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-                  width: width,
+                  width: (width / 2) - 15,
                   height: height,
                   child: DropdownButtonFormField<String>(
                     decoration: InputDecoration(
@@ -275,7 +275,7 @@ class _NewBookPageState extends State<NewBookPage> {
                 ),
                 const SizedBox(width: 10),
                 SizedBox(
-                  width: width,
+                  width: (width / 2) - 15,
                   height: height,
                   child: DropdownButtonFormField<String>(
                     decoration: InputDecoration(
@@ -312,7 +312,7 @@ class _NewBookPageState extends State<NewBookPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: width,
+                  width: (width / 2) - 15,
                   height: height,
                   child: DropdownButtonFormField<String>(
                     decoration: InputDecoration(
@@ -344,7 +344,7 @@ class _NewBookPageState extends State<NewBookPage> {
                 ),
                 const SizedBox(width: 10),
                 SizedBox(
-                  width: width,
+                  width: (width / 2) - 15,
                   height: height,
                   child: buildTextField("Volume Info", "0",
                       TextInputType.number, _volumeInfoController),
@@ -356,7 +356,7 @@ class _NewBookPageState extends State<NewBookPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: width,
+                  width: (width / 2) - 15,
                   height: height,
                   child: DropdownButtonFormField<String>(
                     decoration: InputDecoration(
@@ -388,7 +388,7 @@ class _NewBookPageState extends State<NewBookPage> {
                 ),
                 const SizedBox(width: 10),
                 SizedBox(
-                  width: width,
+                  width: (width / 2) - 15,
                   height: height,
                   child: DropdownButtonFormField<String>(
                     decoration: InputDecoration(
@@ -440,13 +440,13 @@ class _NewBookPageState extends State<NewBookPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                    width: width,
+                    width: (width / 2) - 15,
                     height: height,
                     child: buildTextField("Release Date", "01.01.2020",
                         TextInputType.number, _releaseDateController)),
                 const SizedBox(width: 10),
                 SizedBox(
-                  width: width,
+                  width: (width / 2) - 15,
                   height: height,
                   child: buildTextField("Pay Date", "01.01.2020",
                       TextInputType.number, _payDateController),
@@ -458,13 +458,13 @@ class _NewBookPageState extends State<NewBookPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                    width: width,
+                    width: (width / 2) - 15,
                     height: height,
                     child: buildTextField("Start Date", "01.01.2020",
                         TextInputType.number, _startDateController)),
                 const SizedBox(width: 10),
                 SizedBox(
-                    width: width,
+                    width: (width / 2) - 15,
                     height: height,
                     child: buildTextField("End Date", "01.01.2020",
                         TextInputType.number, _endDateController)),

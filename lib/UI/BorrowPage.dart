@@ -67,7 +67,7 @@ class _BorrowPageState extends State<BorrowPage> {
                       itemBuilder: (context, index) {
                         return BookCard(
                           book: books[index],
-                          from: 2,
+                          from: 1,
                         );
                       },
                     ),

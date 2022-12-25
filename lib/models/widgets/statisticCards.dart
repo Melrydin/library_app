@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:library_app/models/widgets/groundDesign.dart';
 
 import '../global.dart';
 import 'converter.dart';
@@ -16,26 +17,14 @@ class AllPay extends StatefulWidget {
 class _AllPayState extends State<AllPay> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
-        padding: const EdgeInsets.all(5),
-        height: 60,
-        width: 380,
-        decoration: BoxDecoration(
-          color: redColor,
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.5),
-              blurRadius: 10.0,
-            ),
-          ],
-        ),
-        child: Center(
-            child: Text(
+    return DesignContainer(
+      child: Center(
+        child: Text(
           "All Pay: ${widget.pay}€",
           style: darkAllPay,
-        )));
+        ),
+      ),
+    );
   }
 }
 
@@ -53,21 +42,7 @@ class YearStatistics extends StatefulWidget {
 class _YearStatistics extends State<YearStatistics> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
-      padding: const EdgeInsets.all(5),
-      height: 105,
-      width: 380,
-      decoration: BoxDecoration(
-        color: redColor,
-        borderRadius: const BorderRadius.all(Radius.circular(10)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.5),
-            blurRadius: 10.0,
-          ),
-        ],
-      ),
+    return DesignContainer(
       child: Column(
         children: [
           Text("${widget.year}", style: darkBookTitle),
@@ -101,37 +76,23 @@ class WishOrLibrary extends StatelessWidget {
           colorFn: (ChartData e, _) => e.barColor,
           labelAccessorFn: (ChartData row, _) => '${row.title}: ${row.value}'),
     ];
-    return Container(
-        margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
-        padding: const EdgeInsets.all(5),
-        height: 380,
-        width: 380,
-        decoration: BoxDecoration(
-          color: redColor,
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.5),
-              blurRadius: 10.0,
-            ),
-          ],
-        ),
+    return DesignContainer(
         child: Column(
-          children: [
-            Text("Wish, Library or Gift", style: darkBookTitle),
-            Divider(
-              height: 10,
-              color: darkGreyColor,
-            ),
-            SizedBox(
-              height: 300,
-              width: 300,
-              child: charts.PieChart(
-                series,
-                animate: false,
-              ),
-            ),
-          ],
-        ));
+      children: [
+        Text("Wish, Library or Gift", style: darkBookTitle),
+        Divider(
+          height: 10,
+          color: darkGreyColor,
+        ),
+        SizedBox(
+          height: 300,
+          width: 300,
+          child: charts.PieChart(
+            series,
+            animate: false,
+          ),
+        ),
+      ],
+    ));
   }
 }

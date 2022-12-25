@@ -11,22 +11,14 @@ String dateToString(DateTime? date) {
 
 String isbnFormat(int isbn) {
   if (isbn.toString().length == 13) {
-    final _StrIsbn = isbn.toString();
-    final _StrIsbn1 = _StrIsbn.substring(0, 3);
-    final _StrIsbn2 = _StrIsbn.substring(3, 4);
-    final _StrIsbn3 = _StrIsbn.substring(4, 8);
-    final _StrIsbn4 = _StrIsbn.substring(8, 12);
-    final _StrIsbn5 = _StrIsbn.substring(12, 13);
-    final _StrIsbn6 = _StrIsbn1 +
-        "-" +
-        _StrIsbn2 +
-        "-" +
-        _StrIsbn3 +
-        "-" +
-        _StrIsbn4 +
-        "-" +
-        _StrIsbn5;
-    return _StrIsbn6;
+    final strIsbn = isbn.toString();
+    final strIsbn1 = strIsbn.substring(0, 3);
+    final strIsbn2 = strIsbn.substring(3, 4);
+    final strIsbn3 = strIsbn.substring(4, 8);
+    final strIsbn4 = strIsbn.substring(8, 12);
+    final strIsbn5 = strIsbn.substring(12, 13);
+    final strIsbn6 = "$strIsbn1-$strIsbn2-$strIsbn3-$strIsbn4-$strIsbn5";
+    return strIsbn6;
   } else {
     return "Wong ISBN";
   }
