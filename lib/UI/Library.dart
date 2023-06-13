@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:library_app/UI/NavigationWidget.dart';
+
 import 'package:library_app/models/global.dart';
 import 'package:library_app/models/widgets/bookCards.dart';
+import 'package:library_app/models/widgets/book.dart';
+
 import 'package:library_app/networking.dart';
 
-import '../databaseHelper.dart';
-import '../models/widgets/book.dart';
 
 class LibraryPage extends StatefulWidget {
   const LibraryPage({Key? key}) : super(key: key);

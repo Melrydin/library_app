@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:library_app/UI/Library.dart';
 import 'package:library_app/UI/Statistics.dart';
 import 'package:library_app/UI/WishList.dart';
+
 import 'package:library_app/main.dart';
 import 'package:library_app/models/global.dart';
-
 import 'BorrowPage.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {

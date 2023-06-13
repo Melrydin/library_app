@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+
 import 'package:library_app/UI/BorrowPage.dart';
 import 'package:library_app/UI/Library.dart';
 import 'package:library_app/UI/WishList.dart';
 
-import 'package:library_app/models/widgets/book.dart';
 import 'package:library_app/networking.dart';
 
-import '../models/global.dart';
-import '../models/widgets/buttons.dart';
-import '../models/widgets/converter.dart';
+import 'package:library_app/models/global.dart';
+import 'package:library_app/models/widgets/buttons.dart';
+import 'package:library_app/models/widgets/converter.dart';
+import 'package:library_app/models/widgets/book.dart';
 
 class NewBookPage extends StatefulWidget {
   final int inEditMode;

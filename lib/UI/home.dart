@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../models/global.dart';
+import 'package:library_app/models/global.dart';
+
 import 'NavigationWidget.dart';
 
 class Home extends StatefulWidget {

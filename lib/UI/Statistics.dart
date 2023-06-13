@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/UI/NavigationWidget.dart';
-import 'package:library_app/models/widgets/statisticCards.dart';
-import 'package:library_app/models/global.dart';
-import 'package:library_app/networking.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
-import '../models/widgets/converter.dart';
+import 'package:library_app/UI/NavigationWidget.dart';
+
+import 'package:library_app/models/widgets/statisticCards.dart';
+import 'package:library_app/models/global.dart';
+import 'package:library_app/models/widgets/converter.dart';
+
+import 'package:library_app/networking.dart';
+
+
 
 class StatisticsPage extends StatefulWidget {
   const StatisticsPage({Key? key}) : super(key: key);

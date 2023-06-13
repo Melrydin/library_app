@@ -110,17 +110,17 @@ class Book {
   factory Book.fromMap(Map<String, dynamic> map) {
     return Book(
       id: map['id'] != null ? map['id'] as int : null,
-      category: map['category'] as String,
-      title: map['title'] as String,
-      series: map['series'] as bool,
-      volume: map['volume'] as int,
-      author: map['author'] as String,
-      publisher: map['publisher'] as String,
-      price: map['price'] as double,
-      isbn: map['isbn'] as int,
-      wishlist: map['wishlist'] as bool,
-      gift: map['gift'] as bool,
-      borrow: map['borrow'] as bool,
+      category: map['category'] != null ? map['category'] as String: 'category',
+      title: map['title'] != null ? map['title'] as String: 'title',
+      series: map['series'] != null ? map['series']as bool: false,
+      volume: map['volume'] != null ? map['volume'] as int: 0,
+      author: map['author'] != null ? map['author'] as String: 'author',
+      publisher: map['publisher'] != null ? map['publisher'] as String: 'publisher',
+      price: map['price'] != null ? map['price'] as double: 0.0,
+      isbn: map['isbn'] != null ? map['isbn']as int: 0,
+      wishlist: map['wishlist'] != null ? map['wishlist'] as bool: false,
+      gift: map['gift'] != null ? map['gift'] as bool: false,
+      borrow: map['borrow'] != null ? map['borrow'] as bool: false,
       releaseDate: map['releaseDate'] != null
           ? DateFormat('yyyy-MM-dd').parse(map['releaseDate'] as String)
           : null,

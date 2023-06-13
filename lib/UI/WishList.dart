@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:library_app/UI/NavigationWidget.dart';
 import 'package:library_app/UI/NewBookPage.dart';
-import 'package:library_app/databaseHelper.dart';
+
 import 'package:library_app/models/global.dart';
+import 'package:library_app/models/widgets/book.dart';
+import 'package:library_app/models/widgets/bookCards.dart';
+
 import 'package:library_app/networking.dart';
 
-import '../models/global.dart';
-import '../models/widgets/book.dart';
-import '../models/widgets/bookCards.dart';
+
 
 class WishListPage extends StatefulWidget {
   const WishListPage({Key? key}) : super(key: key);
